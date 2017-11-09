@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2017-11-09T17:03:00</date>
+  <millis>1510243380673</millis>
+  <sequence>1</sequence>
+  <logger>main.Main</logger>
+  <level>SEVERE</level>
+  <class>main.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Overdraft. Current balance = 100.0 Current ceiling = 50.0</message>
+</record>
+</log>
