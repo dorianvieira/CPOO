@@ -1,4 +1,4 @@
-ackage main;
+package main;
 
 import java.util.logging.Logger;
 import java.io.IOException;
