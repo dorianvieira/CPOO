@@ -1,7 +1,7 @@
 package model.factory;
 
-import model.declaration.EntrepriseItf;
-import model.implementation.Employe;
+import model.dec.EntrepriseItf;
+import model.impl.Employe;
 
 public class EmployeFactory
 {

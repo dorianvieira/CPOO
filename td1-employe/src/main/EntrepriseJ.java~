@@ -13,7 +13,7 @@ import model.exceptions.HeuresHebdoDepassees;
 
 public class EntrepriseJ {
 
-	private static final Logger LOG = Logger.getLogger(EntrepriseJ.class.getCanonicalName());
+	private static final Logger LOG = Logger.getLogger(Main.class.getCanonicalName());
 
 	public static void main(String[] args){
 

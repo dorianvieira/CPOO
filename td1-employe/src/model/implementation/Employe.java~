@@ -43,7 +43,7 @@ public class Employe implements EntrepriseItf{ //entreprise est l'interface qui 
 	public double salaireHebdo() throws HeuresHebdoDepassees{
 		try{
 			if (heuresTravaillees>60) {
-				throw new HeuresHebdoDepassees("Heures de travailles dépasses de "+(60-heuresTravaillees)+" heures");
+				throw new HeuresHebdoDepassees("Heures de travailles dépasses de "+(60-heuresTravailles)+" heures");
 			}else if(heuresTravaillees>40){
 				return ((1.5*salaireHoraire)*(double)heuresTravaillees);//convertie en double les h travaillees
 			}

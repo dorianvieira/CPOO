@@ -7,5 +7,5 @@ public interface EntrepriseItf {
 	double salaireHebdo() throws HeuresHebdoDepassees;
     String getNom();
     double getSalaireBase();
-    int getHeuresTravaillees();
+    int getHeuresTravailles();
 }
