@@ -1,8 +1,6 @@
 package main;
 
 import java.util.logging.Logger;
-
-import java.util.logging.Logger;
 import java.util.logging.Level;
 import java.util.logging.Handler;
 import java.util.logging.ConsoleHandler;
@@ -10,35 +8,32 @@ import java.util.logging.FileHandler;
 import java.io.IOException;
 import java.util.logging.SimpleFormatter;
 
-import model.implementation.SalleCinema;
+import model.impl.SalleCinema;
 import model.exceptions.SallePleine;
 import model.fact.SalleFactory;
 
-public final class Main{
+public final class Main {
+    private static final Logger LOG = Logger.getLogger(Main.class.getCanonicalName());
 
- 
- private static final Logger LOG = Logger.getLogger(Main.class.getCanonicalName());
+    public static void main (String[] args) {
 
-	public static void main(String[]args){
+        SalleFactory sf = new SalleFactory();
 
-		
-		SalleFactory sf = new SalleFactory();
+        SalleCinema s1 = new SalleCinema();
+        SalleCinema s2 = sf.createSalleCinema("Harry Potter 8",200,9.5);
 
-       //SalleCinema salle1 = new SalleCinema();
-		
-		SalleCinema salle2 = new SalleCinema5("Fast and furious",15,150d);
-
-		try{
+        //s2.estPleine();
+        try{
             for(int i=0;i<=250;i++){
-                salle2.vendrePlace();
+                s2.vendrePlace();
             }
         }catch(SallePleine ex){
             LOG.severe(ex.getMessage());
         }finally{
-            LOG.fine("Il y a encore" + salle2.nbPlacesDisponible() +" place(s) disponible(s)");
+            LOG.fine("Il reste encore " + s2.nbPlacesDisponible());
         }
             
-        System.out.println(salle1.toString());    
-        System.out.println(salle2.toString());
+        System.out.println(s1);    
+        System.out.println(s2);
     }
 }
